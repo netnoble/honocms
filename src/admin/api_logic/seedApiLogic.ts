@@ -28,7 +28,7 @@ export async function adminFindOrCreateLogic(c:Context) {
             }).returning();
             return await sendSuccessResponse(insert);
         }
-        return await sendSuccessResponse(result);
+        return await sendSuccessResponse([]);
     } catch (error) {
         handleError(error)
     }

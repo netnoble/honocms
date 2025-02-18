@@ -6,7 +6,7 @@ Content-Type: application/json
 
 
 ### Post
-POST https://cms01.muxin-tool.workers.dev/api/seed/admin
+POST https://www.honocms.com/admin/api/seed/admin
 Content-Type: application/json
 
 
@@ -19,7 +19,7 @@ Content-Type: application/json
 
 
 ### Post
-POST https://cms01.muxin-tool.workers.dev/api/seed/system
+POST https://www.honocms.com/admin/api/seed/system
 Content-Type: application/json
 
 
