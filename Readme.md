@@ -9,10 +9,10 @@ https://cdnjs.com/libraries/layui
 npx drizzle-kit generate
 
 2、这个是本地
-npx wrangler d1 migrations apply cms_db_one
+npx wrangler d1 migrations apply honocms_db
 
 3、这个是推送到云端
-npx wrangler d1 migrations apply cms_db_one --remote
+npx wrangler d1 migrations apply honocms_db --remote
 
 
 
