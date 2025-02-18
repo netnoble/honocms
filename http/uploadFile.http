@@ -1,0 +1,12 @@
+### POST
+POST http://127.0.0.1:8788/admin/api/uploadFile/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTczODIzNjY1NH0.lnyphDWWbvUWrJmq-4FCWr17EaHggVAXbkFE5PCNyjU
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="example.txt"
+Content-Type: text/plain
+
+< C:\Users\Administrator\Desktop\12.png
+--WebAppBoundary--
+

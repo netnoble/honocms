@@ -1,0 +1,25 @@
+
+### Post
+POST http://127.0.0.1:8788/admin/api/seed/admin
+Content-Type: application/json
+
+
+
+### Post
+POST https://cms01.muxin-tool.workers.dev/api/seed/admin
+Content-Type: application/json
+
+
+
+
+### Post
+POST http://127.0.0.1:8788/admin/api/seed/system
+Content-Type: application/json
+
+
+
+### Post
+POST https://cms01.muxin-tool.workers.dev/api/seed/system
+Content-Type: application/json
+
+

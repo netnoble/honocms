@@ -1,0 +1,32 @@
+### Get
+GET http://127.0.0.1:8787/api/personal/getAdminInfo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTczODIzNjY1NH0.lnyphDWWbvUWrJmq-4FCWr17EaHggVAXbkFE5PCNyjU
+
+
+### Get
+GET https://cms01.muxin-tool.workers.dev/api/personal/getAdminInfo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTczODc0NjQ5NX0.0EHT-r1OTde7PhZLQd2bo8zjWBHUxft-U0VYh1JOJhk
+
+
+### Post
+POST http://127.0.0.1:8787/api/personal/updateUser
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTczODIzNjY1NH0.lnyphDWWbvUWrJmq-4FCWr17EaHggVAXbkFE5PCNyjU
+
+{
+  "name": "admin",
+  "email": "admin@qq.com",
+  "age": 45
+}
+
+### Post
+POST http://127.0.0.1:8787/api/personal/updatePassword
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTczODIzNjY1NH0.lnyphDWWbvUWrJmq-4FCWr17EaHggVAXbkFE5PCNyjU
+
+{
+  "oldPassword": "123456"
+}
+###http://127.0.0.1:8787

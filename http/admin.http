@@ -1,0 +1,7 @@
+### Post
+POST http://127.0.0.1:8787/api/auth/admin/info
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyMTIzIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzM4MTI5ODMzfQ.lwH9yfv_8dsHuWiKzDXynQn3-dNslOso4bE_nhU8mFA
+
+
+###http://127.0.0.1:8787

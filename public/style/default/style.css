@@ -1,0 +1,51 @@
+.honocms-header {
+    height: 65px;
+    line-height: 65px;
+    border-bottom: 1px solid #f7f7f7;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 99999;
+}
+.honocms-body{
+    padding-top: 65px;
+    min-height: 100%;
+    /*margin-bottom: -65px;*/
+}
+.honocms-logo{
+}
+.honocms-logo a{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+}
+/*.honocms-nav{*/
+/*    position: absolute;*/
+/*    left: 240px;*/
+/*    top: 50%;*/
+/*    height: 32px;*/
+/*    margin-top: -16px;*/
+/*}*/
+
+.layui-nav .layui-this:after, .layui-nav-bar{
+    background-color: #007bff !important;
+}
+.honocms-nav a{
+    font-weight: 400;
+    font-size: 18px;
+}
+.honocms-nav a:hover{
+    color: #007bff !important;
+}
+.honocms-side-nav-footer{
+    padding:5px 20px;
+    text-align: center;
+}
+.honocms-side-nav-footer a{
+    margin: 0 3px;
+    font-size: 14px;
+}
+
+

@@ -1,0 +1,37 @@
+.wp{
+    width: 1024px;
+    margin: 0 auto;
+}
+.honocms-login{
+    background: url("bg.jpg") no-repeat;
+    background-size: 100%;
+}
+.login-form{
+    background: #ffffff;
+    padding: 30px 20px;
+    height: 260px;
+    border-radius: 8px;
+    margin:20px 0;
+}
+.login-form .box .title{
+    text-align: center;
+    height: 50px;
+    line-height: 40px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.honocms-form-body{
+    background: #ffffff;
+}
+
+.honocms-form-box{
+    padding: 20px;
+}
+
+.layui-form-label.required::after {
+    content: " *";
+    color: red;
+}
+
+

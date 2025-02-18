@@ -1,0 +1,27 @@
+### Post
+POST http://127.0.0.1:8788/admin/api/passport/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "123456"
+}
+
+
+### Post
+POST http://127.0.0.1:8788/admin/api/passport/logout
+Content-Type: application/json
+
+
+
+### Post
+POST https://cms01.muxin-tool.workers.dev/api/passport/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "123456"
+}
+
+
+###http://127.0.0.1:8787

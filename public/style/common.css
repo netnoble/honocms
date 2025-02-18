@@ -1,0 +1,110 @@
+/* 全局样式 */
+body {
+    font-family: ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    border-color: #e5e3e3;
+    font-size: 16px;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+}
+p {
+    margin: 0;
+}
+
+.wp{
+    width: 100%;
+}
+.layui-container {
+    width: 100%; /* 默认宽度自适应屏幕 */
+    margin: 0 auto;
+    max-width: 1200px; /* 在大屏幕上限制最大宽度 */
+}
+
+/* 当屏幕宽度小于 768px 时（通常是移动端设备） */
+@media screen and (max-width: 768px) {
+    .layui-container {
+        padding: 0 15px; /* 为小屏幕设备添加内边距 */
+    }
+    .honocms-nav{
+        display: none !important;
+    }
+    .honocms-nav > li {
+        display: none !important; /* 默认隐藏菜单项 */
+    }
+    .honocms-nav-right{
+        display: none !important;
+    }
+    .honocms-nav-right > li {
+        display: none !important; /* 默认隐藏菜单项 */
+    }
+    .honocms-nav-icon{
+        display: block !important;
+        text-align: right;
+        cursor: pointer;
+    }
+    /*.honocms-nav.show > li {*/
+    /*    display: block; !* 显示菜单项 *!*/
+    /*}*/
+    /*.honocms-nav > li:first-child {*/
+    /*    display: block; !* 始终显示第一个菜单项 *!*/
+    /*}*/
+
+
+}
+
+.layui-bg-white{background-color:#ffffff!important;color:#5f5f5f!important}
+
+.layui-nav-tree.layui-bg-white a, .layui-nav.layui-bg-white .layui-nav-item a {
+    color: #373737;
+    color: rgba(0, 0, 0, .8)
+}
+
+.layui-nav-tree.layui-bg-white .layui-nav-itemed > a {
+    color: #000 !important
+}
+
+.layui-nav.layui-bg-white .layui-this a {
+    color: #007bff
+}
+
+.layui-nav-tree.layui-bg-white .layui-nav-child {
+    padding-left: 11px;
+    background: 0 0
+}
+
+.layui-nav-tree.layui-bg-white .layui-nav-child dd.layui-this, .layui-nav-tree.layui-bg-white .layui-nav-child dd.layui-this a, .layui-nav-tree.layui-bg-white .layui-this, .layui-nav-tree.layui-bg-white .layui-this > a {
+    background: 0 0 !important;
+    color: #007bff !important;
+    font-weight: 700
+}
+
+.layui-nav-tree.layui-bg-white .layui-nav-bar {
+    background-color: #007bff
+}
+
+
+
+
+
+
+
+

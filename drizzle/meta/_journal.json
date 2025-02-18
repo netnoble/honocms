@@ -1,0 +1,62 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1739029519648,
+      "tag": "0000_broken_prism",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1739156841947,
+      "tag": "0001_violet_terrax",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1739196214463,
+      "tag": "0002_plain_true_believers",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1739261201003,
+      "tag": "0003_odd_tigra",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1739409309732,
+      "tag": "0004_workable_dexter_bennett",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1739546375689,
+      "tag": "0005_outgoing_colossus",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1739547556712,
+      "tag": "0006_elite_jack_flag",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1739755169565,
+      "tag": "0007_known_next_avengers",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #2e83f3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin: 1rem 0;
+}
+ul {
+    list-style-type: none;
+}
+p {
+    margin: 1rem 0;
+}
+.honocms-text-center{
+    text-align: center;
+}
+
+
+.honocms-layout-default .layui-header{
+    background: #ffffff;
+}
+.honocms-layout-default .layui-nav{
+    background: #ffffff;
+}
+
+.honocms-layout-default .layui-side-scroll{
+    background: #ffffff;
+}
+.honocms-layout-default .layui-nav .layui-nav-item a{
+    color: #333333;
+}
+.honocms-layout-default .honocms-bg-black{
+    background: #002140;
+}
+.honocms-menu{
+    margin: 0 5px;
+    padding: 10px;
+    border-bottom: 1px dashed #e5e3e3;
+}
+.honocms-menu .box-header .title{
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, .8);
+    font-weight: 700;
+}
+
+.honocms-menu .box-content .title{
+    height: 35px;
+    line-height: 35px;
+}
+
+.honocms-menu .box-content .title a{
+    color: rgba(0, 0, 0, .8);
+    font-size: 14px;
+}
+.wp{
+    width: 1024px;
+    margin: 0 auto;
+}
+.honocms-login{
+    background: url("bg.jpg") no-repeat;
+    background-size: 100%;
+}
+.login-form{
+    background: #ffffff;
+    padding: 30px 20px;
+    height: 260px;
+    border-radius: 8px;
+    margin:20px 0;
+}
+.login-form .box .title{
+    text-align: center;
+    height: 50px;
+    line-height: 40px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.honocms-form-body{
+    background: #ffffff;
+}
+
+.honocms-form-box{
+    padding: 20px;
+}
+
+.layui-form-label.required::after {
+    content: " *";
+    color: red;
+}
+
+
+
+
+
+
