@@ -16,7 +16,7 @@ enabled = true
 
 [[r2_buckets]]
 bucket_name = "honocms-r2"
-binding = "honocms_r2"
+binding = "honocms_r2" # available in your Worker on
 
 [vars] # s3相关的
 ACCOUNT_ID = ""
@@ -29,8 +29,6 @@ APP_STATIC_URL = "https://xxx.honocms.com" #注意最后不用加/
 binding = "DB" # available in your Worker on env.DB
 database_name = "honocms_db"
 database_id = ""
-#preview_database_id = "DB" # Required for Pages local development
-#migrations_dir = "drizzle"
 migrations_dir = "drizzle"
 migrations_table = "d1_migrations"
 
