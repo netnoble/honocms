@@ -66,9 +66,7 @@ export const indexView = (c:Context, listData:any) =>
                     }
                     // 使用Object.entries()方法将对象转换为键值对数组
                     const keyValueArray = Object.entries(data.field);
-                    console.log('准备提交的数据:', keyValueArray);
-                    // return
-                    RequestUtil.apiPost(urlCreateItem, formData,
+                    RequestUtil.apiPost(urlCreateItem, keyValueArray,
                             function (res) {
                                 let iframeIndex = parent.layer.getFrameIndex(window.name);
                                 parent.layer.close(iframeIndex);
