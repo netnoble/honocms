@@ -1,17 +1,17 @@
 ```
-cdn资源
+cdn jslib
 
 https://cdnjs.com/libraries/layui
 
 
 
-1、推送前先执行，生成SQL
+1. Execute before pushing, generate SQL
 npx drizzle-kit generate
 
-2、这个是本地
+2. This is local
 npx wrangler d1 migrations apply honocms_db
 
-3、这个是推送到云端
+3. This is pushed to the remote end
 npx wrangler d1 migrations apply honocms_db --remote
 
 
@@ -19,7 +19,7 @@ npx wrangler d1 migrations apply honocms_db --remote
 wrangler dev
 wrangler deploy
 
-查看版本 
+View version 
 npx wrangler --version
 wrangler --version
 
