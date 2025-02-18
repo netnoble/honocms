@@ -22,7 +22,7 @@ binding = "honocms_r2"
 ACCOUNT_ID = ""
 ACCESS_KEY_ID = ""
 SECRET_ACCESS_KEY = ""
-R2_BUCKET_NAME = "chonocms-r2"
+R2_BUCKET_NAME = "honocms-r2"
 APP_STATIC_URL = "https://xxx.honocms.com" #注意最后不用加/
 
 [[d1_databases]]
