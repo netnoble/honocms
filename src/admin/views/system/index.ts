@@ -66,7 +66,12 @@ export const indexView = (c:Context, listData:any) =>
                     }
                     // 使用Object.entries()方法将对象转换为键值对数组
                     const keyValueArray = Object.entries(data.field);
-                    RequestUtil.apiPost(urlCreateItem, keyValueArray,
+                    // 转换为期望的格式
+                    let formattedData = keyValueArray.map(([key, value]) => ({
+                        key: key,
+                        value: value
+                    }));
+                    RequestUtil.apiPost(urlCreateItem, formattedData,
                             function (res) {
                                 let iframeIndex = parent.layer.getFrameIndex(window.name);
                                 parent.layer.close(iframeIndex);
