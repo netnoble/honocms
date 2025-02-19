@@ -26,7 +26,7 @@ export const loginView = (c:Context) =>
                                                 <div class="layui-input-prefix">
                                                     <i class="layui-icon layui-icon-username"></i>
                                                 </div>
-                                                <input type="text" name="username" value="admin" lay-verify="required"
+                                                <input type="text" name="username" value="" lay-verify="required"
                                                        placeholder="用户名" lay-reqtext="请填写用户名"
                                                        autocomplete="off" class="layui-input" lay-affix="clear">
                                             </div>
