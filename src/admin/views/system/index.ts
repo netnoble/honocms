@@ -17,7 +17,7 @@ export const indexView = (c:Context, listData:any) =>
                             inputElement = html`<input type="text" name="${item.key}" value="${item.value || ''}" class="layui-input">`;
                             break;
                         case 'image':
-                            inputElement = html` ${raw(uploadComponent(c,item.key,''))}`;
+                            inputElement = html` ${raw(uploadComponent(c,item.key,item.value))}`;
                             break;
                         case 'radio':
                             // options数据结构 [{"label": "启用", "value": "1"},{"label": "禁用", "value": "2"}]

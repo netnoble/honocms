@@ -48,7 +48,7 @@ export async function uploadFileItem(c:Context) {
             updated_at:  sql`datetime('now')`
         }).returning();
         return await sendSuccessResponse({
-            url: `${APP_STATIC_URL}/${bucketName}/${objectKey}`,
+            url: `${APP_STATIC_URL}/${objectKey}`,
             path: `${objectKey}`,
         });
     } catch (error) {

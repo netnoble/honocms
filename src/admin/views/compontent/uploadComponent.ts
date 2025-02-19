@@ -4,14 +4,14 @@ import {getNanoid} from "@/utils/commonUtil";
 
 export const uploadComponent = (c: Context, fieldName:string = 'file',filePath: any) => {
     const initialElementId=  getNanoid();
-
+    console.log(filePath,'1filePath',filePath)
     return html`
         <button type="button" class="layui-btn" id="honocms-upload-${raw(initialElementId)}">
             <i class="layui-icon layui-icon-upload"></i> 单图片上传
         </button>
         <div style="width: 132px;">
             <div class="layui-upload-list">
-                <input type="hidden" name="${raw(fieldName)}" value="">
+                <input type="hidden" name="${raw(fieldName)}" value="${raw(filePath)}">
                 <img class="layui-upload-img" id="honocms-upload-preview-${raw(initialElementId)}" src="${raw(filePath)}" style="width: 100%; height: 92px;">
                 <div id="honocms-upload-text-${raw(initialElementId)}"></div>
             </div>
