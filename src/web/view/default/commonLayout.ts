@@ -12,6 +12,7 @@ export async function commonLayout(content: (string & HtmlEscaped) | Promise<Htm
         <!DOCTYPE html>
         <html lang="zh">
         <head>
+            ${raw(await getSystemInfo(c, "site_html_code"))}
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
             <title>${seoInfo.title}</title>
@@ -29,7 +30,7 @@ export async function commonLayout(content: (string & HtmlEscaped) | Promise<Htm
                 ${content}
             </div>
             ${footerLayout(c, await getSystemInfo(c, "site_copyright"))}
-            ${raw(await getSystemInfo(c, "site_html_code"))}
+            
         </div>
         </body>
         </html>
