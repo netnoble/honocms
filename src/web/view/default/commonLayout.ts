@@ -3,8 +3,11 @@ import { html, raw } from "hono/html";
 import {HtmlEscaped, HtmlEscapedString} from "hono/dist/types/utils/html";
 import {headerLayout} from "./headerLayout";
 import {footerLayout} from "./footerLayout";
+import {getSystemInfo} from "@/web/logic/systemLogic";
 
-export function commonLayout(content: (string & HtmlEscaped) | Promise<HtmlEscapedString>, c: Context,seoInfo?:any) {
+export async function commonLayout(content: (string & HtmlEscaped) | Promise<HtmlEscapedString>, c: Context, seoInfo?: any) {
+
+
     return html`
         <!DOCTYPE html>
         <html lang="zh">
@@ -25,8 +28,8 @@ export function commonLayout(content: (string & HtmlEscaped) | Promise<HtmlEscap
             <div class="honocms-body">
                 ${content}
             </div>
-            ${footerLayout(c)}
-           
+            ${footerLayout(c, await getSystemInfo(c, "site_copyright"))}
+            ${raw(await getSystemInfo(c, "site_html_code"))}
         </div>
         </body>
         </html>
