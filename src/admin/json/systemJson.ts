@@ -27,6 +27,30 @@ export const systemSeedJson = () => {
           updated_at:  sql`datetime('now')`
       },
       {
+          title: "网站关键词",
+          key: "site_keywords",
+          type: "input",
+          options: "",
+          value: "",
+          sort: 1,
+          status: 1,
+          is_deleted: 1,
+          created_at:  sql`datetime('now')`,
+          updated_at:  sql`datetime('now')`
+      },
+      {
+          title: "网站描述",
+          key: "site_description",
+          type: "textarea",
+          options: "",
+          value: "",
+          sort: 1,
+          status: 1,
+          is_deleted: 1,
+          created_at:  sql`datetime('now')`,
+          updated_at:  sql`datetime('now')`
+      },
+      {
           title: "网站LOGO",
           key: "site_logo",
           type: "image",
