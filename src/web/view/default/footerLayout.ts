@@ -1,11 +1,16 @@
 import {html, raw} from "hono/html";
 import {Context} from "hono";
 
-export const footerLayout = (c:Context,seoInfo?:any) => html`
-  <footer>
+export const footerLayout = (c:Context,siteInfo?:any) => html`
+    <div class="honocms-height-10"></div>
+    <footer>
       <div class="layui-container">
-          ${raw(seoInfo.site_copyright)}
       </div>
     
+      <div class="honocms-copyright">
+          <div class="layui-container">
+              ${raw(siteInfo)}
+          </div>
+      </div>
   </footer>
 `
