@@ -3,6 +3,10 @@ cdn jslib
 
 https://cdnjs.com/libraries/layui
 
+1、
+git clone https://github.com/netnoble/honocms.git
+cd honocms
+copy wrngler_bak.toml => wrangler.toml
 
 
 1. Execute before pushing, generate SQL
