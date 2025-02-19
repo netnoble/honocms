@@ -1,4 +1,4 @@
-// src/services/indexService.ts
+// src/web/logic/adLogic.ts
 
 import { drizzle } from 'drizzle-orm/d1';
 import {adCategorySchema} from "@/db/schema/adCategorySchema";

@@ -1,4 +1,4 @@
-// src/services/indexService.ts
+// src/web/logic/navLogic.ts
 
 import { drizzle } from 'drizzle-orm/d1';
 import {navSchema} from "@/db/schema/navSchema";

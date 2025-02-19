@@ -1,4 +1,4 @@
-// src/services/indexService.ts
+// src/web/logic/indexLogic.ts
 
 
 export async function getAdminInfoService(c: any) {
