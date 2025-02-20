@@ -10,6 +10,9 @@ export const adSchema = sqliteTable(
         category_id: int(),//分类id
         sort: int(),//排序
         file_path: text(),
+            field_one: text(),
+            field_two: text(),
+            field_three: text(),
         link_type: text(),//跳转方式
         remark: text(),//备注
         status: int().default(1),//状态:1:正常，2:禁用
