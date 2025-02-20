@@ -1,6 +1,6 @@
 import { html,raw } from "hono/html";
 import { Context } from "hono";
-import {uploadComponent} from "@/admin/views/compontent/uploadComponent";
+import {uploadComponent} from "@/admin/views/component/uploadComponent";
 
 export const indexView = (c:Context, listData:any) =>
     html`

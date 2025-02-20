@@ -1,8 +1,8 @@
 import {html,raw} from "hono/html";
 import {Context} from "hono";
-import {wangeditorComponent} from '@/admin/views/compontent/wangeditorComponent'
-import {uploadComponent} from '@/admin/views/compontent/uploadComponent'
-import {optionItemTreeComponent} from '@/admin/views/compontent/OptionTreeComponent'
+import {wangeditorComponent} from '@/admin/views/component/wangeditorComponent'
+import {uploadComponent} from '@/admin/views/component/uploadComponent'
+import {optionItemTreeComponent} from '@/admin/views/component/OptionTreeComponent'
 export const editView = (c:Context, categoryList:any, detailData:any) => {
 
     return html`

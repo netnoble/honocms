@@ -1,6 +1,6 @@
 import {html,raw} from "hono/html";
 import {Context} from "hono";
-import {optionCategoryTreeComponent} from '@/admin/views/compontent/OptionTreeComponent'
+import {optionCategoryTreeComponent} from '@/admin/views/component/OptionTreeComponent'
 
 export const addView = (c:Context, categoryList:any) =>
     html`

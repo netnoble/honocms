@@ -5,8 +5,7 @@ import {headerLayout} from "./headerLayout";
 import {footerLayout} from "./footerLayout";
 import {getSystemInfo} from "@/web/logic/systemLogic";
 
-export async function commonLayout(content: (string & HtmlEscaped) | Promise<HtmlEscapedString>, c: Context, seoInfo?: any) {
-
+export const commonLayout = async (content: (string & HtmlEscaped) | Promise<HtmlEscapedString>, c: Context, seoInfo?: any) => {
 
     return html`
         <!DOCTYPE html>

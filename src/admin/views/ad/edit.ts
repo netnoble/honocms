@@ -1,6 +1,6 @@
 import {html,raw} from "hono/html";
 import {Context} from "hono";
-import {uploadComponent} from "@/admin/views/compontent/uploadComponent";
+import {uploadComponent} from "@/admin/views/component/uploadComponent";
 
 export const editView = (c:Context, adCategory:any, detailData:any) => {
     return html`

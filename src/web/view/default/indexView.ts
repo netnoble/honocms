@@ -1,21 +1,13 @@
 import {html,raw} from "hono/html";
 import {Context} from "hono";
+import {homeBannerComponent} from "@/web/view/default/component/homeBannerComponent";
 
 export const indexView = (c:Context) =>
     html`
-
-        <div class="layui-container">
-            <!-- 主要内容 -->
-            <div class="layui-row layui-col-space20">
-                <!-- 左侧图片 -->
-                <div class="layui-col-md12" style="height: 300px;line-height:260px;background: #fff">
-                    <h1 class="" style="text-align: center; color: #333;">欢迎来到 Honocms 项目</h1>
-                </div>
-
-            </div> <!-- 主要内容 -->
+        <div>
+            ${homeBannerComponent(c)}
         </div>
         
-      
         
         <div class="layui-container">
             <div class="layui-row layui-col-space20">

@@ -1,9 +1,9 @@
 import {html,raw} from "hono/html";
 import {Context} from "hono";
-import {wangeditorComponent} from '@/admin/views/compontent/wangeditorComponent'
-import {uploadComponent} from '@/admin/views/compontent/uploadComponent'
-import {uploadMultipleComponent} from '@/admin/views/compontent/uploadMultipleComponent'
-import {optionItemTreeComponent} from '@/admin/views/compontent/OptionTreeComponent'
+import {wangeditorComponent} from '@/admin/views/component/wangeditorComponent'
+import {uploadComponent} from '@/admin/views/component/uploadComponent'
+import {uploadMultipleComponent} from '@/admin/views/component/uploadMultipleComponent'
+import {optionItemTreeComponent} from '@/admin/views/component/OptionTreeComponent'
 
 export const addView = (c:Context, categoryList:any) => {
 
