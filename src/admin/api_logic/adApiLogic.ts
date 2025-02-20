@@ -38,6 +38,9 @@ export async function createItem(c:Context) {
             sort: params.sort,
             link_type: params.link_type,
             status: params.status,
+            field_one: params.field_one,
+            field_two: params.field_two,
+            field_three: params.field_three,
             created_at:  sql`datetime('now')`,
             updated_at:  sql`datetime('now')`
         }).returning();
@@ -87,6 +90,9 @@ export async function updateItem(c:Context) {
                 sort: params.sort,
                 link_type: params.link_type,
                 status: params.status,
+                field_one: params.field_one,
+                field_two: params.field_two,
+                field_three: params.field_three,
                 updated_at:  sql`datetime('now')`
             })
             .where(eq(adSchema.id, params.id));

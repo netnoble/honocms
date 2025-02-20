@@ -59,6 +59,24 @@ export const editView = (c:Context, adCategory:any, detailData:any) => {
                     </div>
                 </div>
                 <div class="layui-form-item">
+                    <label class="layui-form-label ">扩展字段1</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="field_one" value="${raw(detailData.field_one)}" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label ">扩展字段2</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="field_two" value="${raw(detailData.field_two)}" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label ">扩展字段3</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="field_three" value="${raw(detailData.field_three)}" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
                     <label class="layui-form-label ">备注</label>
                     <div class="layui-input-block">
                         <textarea type="text" name="remark" class="layui-textarea">${raw(detailData.remark)}</textarea>

@@ -57,6 +57,13 @@
       "when": 1739755169565,
       "tag": "0007_known_next_avengers",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1740063161781,
+      "tag": "0008_icy_phalanx",
+      "breakpoints": true
     }
   ]
 }
