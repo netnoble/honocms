@@ -1,11 +1,15 @@
 import {html,raw} from "hono/html";
 import {Context} from "hono";
 import {homeBannerComponent} from "@/web/view/default/component/homeBannerComponent";
+import {homeAdvantageComponent} from "@/web/view/default/component/homeAdvantageComponent";
 
 export const indexView = (c:Context) =>
     html`
         <div>
             ${homeBannerComponent(c)}
+        </div>
+        <div>
+            ${homeAdvantageComponent(c)}
         </div>
         
         
