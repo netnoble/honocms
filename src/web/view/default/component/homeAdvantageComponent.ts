@@ -32,7 +32,8 @@ export const homeAdvantageComponent = async (c: Context ) => {
             .honocms-home-advantage .box-content .image{
                 width: 52px;
                 height: 50px;
-                object-fit: contain;
+                text-align: center;
+                display: inline-block;
             }
             .honocms-home-advantage .box-content .title{
                 font-weight: bold;
@@ -61,12 +62,12 @@ export const homeAdvantageComponent = async (c: Context ) => {
                     <div class="layui-row layui-col-space20">
                         <!-- 左侧图片 -->
                         <div class="layui-col-md4">
-                            <div class="image"></div>
+                            <div class="image"><img src="https://www.huocms.com/static/home/images/new_index/Advantage_ico01.png"/></div>
                             <div class="title">开源、免费、可商用</div>
                             <div class="sub-title">便捷下载，代码全部开源，无加密，且免费可以商用</div>
                         </div>
                         <div class="layui-col-md4">
-                            <div class="image"></div>
+                            <div class="image"><img src="https://www.huocms.com/static/home/images/new_index/Advantage_ico02.png"/></div>
                             <div class="title">开源、免费、可商用</div>
                             <div class="sub-title">便捷下载，代码全部开源，无加密，且免费可以商用</div>
                         </div>
