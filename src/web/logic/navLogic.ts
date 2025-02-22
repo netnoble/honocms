@@ -12,6 +12,7 @@ export async function getNavList(c:Context) {
         .where(
             and(
                 eq(navSchema.is_deleted, 1),
+                eq(navSchema.status, 1),
             )
         )
         .all();

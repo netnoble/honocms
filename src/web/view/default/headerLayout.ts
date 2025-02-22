@@ -13,12 +13,12 @@ export const headerLayout = async (c: Context ) => {
         if (item.children && item.children.length > 0) {
             // 如果有子菜单，构建带有下拉选项的菜单项
             const childrenItems = item.children.map((child:any) =>
-                `<dd><a href="">${child.name}</a></dd>`
+                `<dd><a href="${child.url}" target="${child.link_type}">${child.name}</a></dd>`
             ).join('');
 
             return `
             <li class="layui-nav-item">
-                <a href="javascript:;">${item.name}</a>
+                <a href="${item.url}" target="${item.link_type}">${item.name}</a>
                 <dl class="layui-nav-child">
                     ${childrenItems}
                 </dl>
@@ -28,7 +28,7 @@ export const headerLayout = async (c: Context ) => {
             // 如果没有子菜单，构建普通菜单项
             return `
             <li class="layui-nav-item">
-                <a href="">${item.name}</a>
+                <a href="${item.url}" target="${item.link_type}">${item.name}</a>
             </li>
         `;
         }
@@ -51,7 +51,7 @@ export const headerLayout = async (c: Context ) => {
             <div class="layui-row">
                 <div class=" layui-col-xs11 layui-col-md2">
                     <div class="honocms-logo">
-                        <a href="#" class="">HonoCMS</a>
+                        <a href="/" class="">HonoCMS</a>
                     </div>
                    
                 </div>
