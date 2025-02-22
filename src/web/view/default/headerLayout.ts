@@ -7,7 +7,6 @@ export const headerLayout = async (c: Context ) => {
     //查询nav信息
     const navList = await getNavList(c);
     const adList = await getAdList(c,'nav_top_right');
-    console.log(adList,'adList')
 
     const renderedNav = navList.map((item:any) => {
         // 判断是否有子菜单

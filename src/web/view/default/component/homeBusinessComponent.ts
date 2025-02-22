@@ -1,11 +1,36 @@
 import {html,raw} from "hono/html";
 import {Context} from "hono";
-import {getAdDetail} from "@/web/logic/adLogic";
+import {getAdDetail, getAdList} from "@/web/logic/adLogic";
 
 export const homeBusinessComponent = async (c: Context ) => {
 
-    const adBanner = await getAdDetail(c,'home-banner');
-    console.log('adBanner',adBanner);
+    const adBusinessHeader = await getAdDetail(c,'home-business-header');
+    const adBusinessList = await getAdList(c,'home-business-content');
+    console.log('adBusinessHeader',adBusinessHeader);
+    console.log('adBusinessList',adBusinessList);
+
+
+    const htmlBusinessList = adBusinessList.map((item:any) => {
+        // 如果没有子菜单，构建普通菜单项
+        return `
+            <div class="layui-col-md4">
+                <div class="block">
+                    <div class="image">
+                    <a href="${item.url}" target="${item.link_type}">
+                        <img class="img" src="${item.file_path}"/>
+                    </a>
+                    </div>
+                    <div class="title">
+                        <a href="${item.url}" target="${item.link_type}">${item.name}</a>
+                    </div>
+                    <div class="sub-title">${item.field_one}</div>
+                </div>
+            </div>
+            
+        `;
+    }).join('');
+
+
     return html`
         <style>
             .honocms-home-business {
@@ -40,7 +65,7 @@ export const homeBusinessComponent = async (c: Context ) => {
             .honocms-home-business .box-content .image .img{
                 width: 100%;
                 height: 160px;
-                
+                border-radius: 4px 4px 0 0;
             }
             .honocms-home-business .box-content .title{
                 font-weight: bold;
@@ -69,56 +94,13 @@ export const homeBusinessComponent = async (c: Context ) => {
                 <!-- 主要内容 -->
                 
                 <div class="box-header">
-                    <div class="title">探索HonoCMS商业化服务：开启您的数字成功之旅</div>
-                    <div class="sub-title">HonoCMS为您提供一站式解决方案，通过我们的专业商业化服务，帮助您打造个性化、高效的网站与应用平台。</div>
+                    <div class="title">${raw(adBusinessHeader?.name)}</div>
+                    <div class="sub-title">${raw(adBusinessHeader?.field_one)}</div>
                 </div>
                 <div class="box-content">
                     <div class="layui-row layui-col-space30">
                         <!-- 左侧图片 -->
-                        <div class="layui-col-md4">
-                            <div class="block">
-                                <div class="image"><img class="img" src="https://www.huocms.com/static/home/images/new_index/new01.jpg"/></div>
-                                <div class="title">定制化开发</div>
-                                <div class="sub-title">便捷下载，代码全部开源，无加密，且免费可以商用</div>
-                            </div>
-                        </div>
-                        <div class="layui-col-md4">
-                            <div class="block">
-                                <div class="image"><img class="img" src="https://www.huocms.com/static/home/images/new_index/new01.jpg"/></div>
-                                <div class="title">全面支持与维护</div>
-                                <div class="sub-title">便捷下载，代码全部开源，无加密，且免费可以商用</div>
-                            </div>
-                        </div>
-
-                        <div class="layui-col-md4">
-                            <div class="block">
-                                <div class="image"><img class="img" src="https://www.huocms.com/static/home/images/new_index/Advantage_ico01.png"/></div>
-                                <div class="title">优化升级服务</div>
-                                <div class="sub-title">专业的培训课程和咨询服务，助力您的团队快速掌握HonoCMS的最佳实践。</div>
-                            </div>
-                        </div>
-                        <div class="layui-col-md4">
-                            <div class="block">
-                                <div class="image"><img class="img" src="https://www.huocms.com/static/home/images/new_index/Advantage_ico02.png"/></div>
-                                <div class="title">开源、免费、可商用</div>
-                                <div class="sub-title">便捷下载，代码全部开源，无加密，且免费可以商用</div>
-                            </div>
-                        </div>
-
-                        <div class="layui-col-md4">
-                            <div class="block">
-                                <div class="image"><img src="https://www.huocms.com/static/home/images/new_index/Advantage_ico01.png"/></div>
-                                <div class="title">开源、免费、可商用</div>
-                                <div class="sub-title">便捷下载，代码全部开源，无加密，且免费可以商用</div>
-                            </div>
-                        </div>
-                        <div class="layui-col-md4">
-                            <div class="block">
-                                <div class="image"><img src="https://www.huocms.com/static/home/images/new_index/Advantage_ico02.png"/></div>
-                                <div class="title">开源、免费、可商用</div>
-                                <div class="sub-title">便捷下载，代码全部开源，无加密，且免费可以商用</div>
-                            </div>
-                        </div>
+                        ${raw(htmlBusinessList)}
                     </div> <!-- 主要内容 -->
                 </div>
             </div>
