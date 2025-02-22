@@ -13,7 +13,8 @@ export const homeAdvantageComponent = async (c: Context ) => {
             }
 
             .honocms-home-advantage .box-header {
-                margin-top: 50px;
+                margin-top: 70px;
+                margin-bottom: 30px;
             }
 
             .honocms-home-advantage .box-header .title {
@@ -51,7 +52,7 @@ export const homeAdvantageComponent = async (c: Context ) => {
                 margin-top: 15px;
             }
             .honocms-home-advantage .box-content .block{
-                margin-bottom: 20px;
+                margin: 20px 0;
                 padding: 0 30px;
             }
         </style>
@@ -63,7 +64,6 @@ export const homeAdvantageComponent = async (c: Context ) => {
                     <div class="title">HonoCMS 核心优势</div>
                     <div class="sub-title">做企业官网当然要选一套好用的CMS</div>
                 </div>
-                <div class="honocms-height-15"></div>
                 <div class="box-content">
                     <div class="layui-row layui-col-space30">
                         <!-- 左侧图片 -->
