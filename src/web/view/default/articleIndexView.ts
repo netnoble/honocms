@@ -1,7 +1,7 @@
 import {html,raw} from "hono/html";
 import {Context} from "hono";
 
-export const articleDetailView = (c:Context) =>{
+export const articleIndexView = (c:Context) =>{
 
 
     return html`
@@ -11,6 +11,7 @@ export const articleDetailView = (c:Context) =>{
 
     `
 }
+
 
 
 
