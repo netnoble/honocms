@@ -1,11 +1,33 @@
 import {html,raw} from "hono/html";
 import {Context} from "hono";
-import {getAdDetail} from "@/web/logic/adLogic";
+import {getAdDetail, getAdList} from "@/web/logic/adLogic";
 
 export const homeAdvantageComponent = async (c: Context ) => {
 
-    const adBanner = await getAdDetail(c,'home-banner');
-    console.log('adBanner',adBanner);
+    const adAdvantageHeader = await getAdDetail(c,'home-advantage-header');
+    const adAdvantageList = await getAdList(c,'home-advantage-content');
+
+
+    const htmlAdvantageList = adAdvantageList.map((item:any) => {
+        // 如果没有子菜单，构建普通菜单项
+        return `
+            <div class="layui-col-md4">
+                <div class="block">
+                    <div class="image">
+                    <a href="${item.url}" target="${item.link_type}">
+                        <img class="img" src="${item.file_path}"/>
+                    </a>
+                    </div>
+                    <div class="title">
+                        <a href="${item.url}" target="${item.link_type}">${item.name}</a>
+                    </div>
+                    <div class="sub-title">${item.field_one}</div>
+                </div>
+            </div>
+            
+        `;
+    }).join('');
+
     return html`
         <style>
             .honocms-home-advantage {
@@ -64,56 +86,13 @@ export const homeAdvantageComponent = async (c: Context ) => {
                 <!-- 主要内容 -->
                 
                 <div class="box-header">
-                    <div class="title">HonoCMS 核心优势</div>
-                    <div class="sub-title">做企业官网当然要选一套好用的CMS</div>
+                    <div class="title">${raw(adAdvantageHeader?.name)}</div>
+                    <div class="sub-title">${raw(adAdvantageHeader?.field_one)}</div>
                 </div>
                 <div class="box-content">
                     <div class="layui-row layui-col-space30">
                         <!-- 左侧图片 -->
-                        <div class="layui-col-md4">
-                            <div class="block">
-                                <div class="image"><img src="https://www.huocms.com/static/home/images/new_index/Advantage_ico01.png"/></div>
-                                <div class="title">开源、免费、可商用</div>
-                                <div class="sub-title">便捷下载，代码全部开源，无加密，且免费可以商用</div>
-                            </div>
-                        </div>
-                        <div class="layui-col-md4">
-                            <div class="block">
-                                <div class="image"><img src="https://www.huocms.com/static/home/images/new_index/Advantage_ico02.png"/></div>
-                                <div class="title">开源、免费、可商用</div>
-                                <div class="sub-title">便捷下载，代码全部开源，无加密，且免费可以商用</div>
-                            </div>
-                        </div>
-
-                        <div class="layui-col-md4">
-                            <div class="block">
-                                <div class="image"><img src="https://www.huocms.com/static/home/images/new_index/Advantage_ico01.png"/></div>
-                                <div class="title">开源、免费、可商用</div>
-                                <div class="sub-title">便捷下载，代码全部开源，无加密，且免费可以商用</div>
-                            </div>
-                        </div>
-                        <div class="layui-col-md4">
-                            <div class="block">
-                                <div class="image"><img src="https://www.huocms.com/static/home/images/new_index/Advantage_ico02.png"/></div>
-                                <div class="title">开源、免费、可商用</div>
-                                <div class="sub-title">便捷下载，代码全部开源，无加密，且免费可以商用</div>
-                            </div>
-                        </div>
-
-                        <div class="layui-col-md4">
-                            <div class="block">
-                                <div class="image"><img src="https://www.huocms.com/static/home/images/new_index/Advantage_ico01.png"/></div>
-                                <div class="title">开源、免费、可商用</div>
-                                <div class="sub-title">便捷下载，代码全部开源，无加密，且免费可以商用</div>
-                            </div>
-                        </div>
-                        <div class="layui-col-md4">
-                            <div class="block">
-                                <div class="image"><img src="https://www.huocms.com/static/home/images/new_index/Advantage_ico02.png"/></div>
-                                <div class="title">开源、免费、可商用</div>
-                                <div class="sub-title">便捷下载，代码全部开源，无加密，且免费可以商用</div>
-                            </div>
-                        </div>
+                        ${raw(htmlAdvantageList)}
                     </div> <!-- 主要内容 -->
                 </div>
             </div>

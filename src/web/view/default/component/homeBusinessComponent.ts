@@ -6,8 +6,6 @@ export const homeBusinessComponent = async (c: Context ) => {
 
     const adBusinessHeader = await getAdDetail(c,'home-business-header');
     const adBusinessList = await getAdList(c,'home-business-content');
-    console.log('adBusinessHeader',adBusinessHeader);
-    console.log('adBusinessList',adBusinessList);
 
 
     const htmlBusinessList = adBusinessList.map((item:any) => {
