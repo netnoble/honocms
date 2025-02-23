@@ -1,10 +1,10 @@
 import {html,raw} from "hono/html";
 import {Context} from "hono";
 
-export const articleListView = (c:Context,itemList :any) =>{
+export const articleListView = (c:Context,itemList? :any) =>{
 
 
-    const htmlItemList = itemList.map((item:any) => {
+    const htmlItemList = itemList?.map((item:any) => {
         // 如果没有子菜单，构建普通菜单项
         return `
             <li>
