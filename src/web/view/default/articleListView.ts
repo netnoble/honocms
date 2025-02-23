@@ -71,7 +71,7 @@ export const articleListView = (c:Context) =>{
                                     <li>
                                         <div class="right">
                                             <div class="title">
-                                                <a href="#">微动态容易出爆款的领域有四大类，分别是新闻，故事，家庭情感，鸡汤。这四大类中最受欢迎的是什么？是情感题材。</a>
+                                                <a href="/article/detail/12">微动态容易出爆款的领域有四大类，分别是新闻，故事，家庭情感，鸡汤。这四大类中最受欢迎的是什么？是情感题材。</a>
                                             </div>
                                             <div class="sub-title">微动态容易出爆款的领域有四大类，分别是新闻，故事，家庭情感，鸡汤。这四大类中最受欢迎的是什么？是情</div>
                                             <div class="time">2024-09-02</div>
