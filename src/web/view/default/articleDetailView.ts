@@ -28,6 +28,13 @@ export const articleDetailView = (c:Context,itemDetail? :any) =>{
                 word-wrap: break-word;
                 word-break: normal;
             }
+            .honocms-detail-list .article-detail .box-content img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 5px;
+                margin: 10px auto;
+                display: block;
+            }
         </style>
         <div class="honocms-detail-list">
             <div class="layui-container ">
