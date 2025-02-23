@@ -1,8 +1,29 @@
 import {html,raw} from "hono/html";
 import {Context} from "hono";
 
-export const articleListView = (c:Context) =>{
+export const articleListView = (c:Context,itemList :any) =>{
 
+
+    const htmlItemList = itemList.map((item:any) => {
+        // 如果没有子菜单，构建普通菜单项
+        return `
+            <li>
+                <div class="left">
+                    <a href="/article/detail/${item.id}">
+                        <img alt="" class="img" src="${item.file_path}"/>
+                    </a>
+                </div>
+                <div class="right">
+                    <div class="title">
+                        <a href="/article/detail/${item.id}">${item.id}</a>
+                    </div>
+                    <div class="sub-title">${item.id}</div>
+                    <div class="time">${item.id}</div>
+                </div>
+            </li>
+            
+        `;
+    }).join('');
 
     return html`
         <style>
@@ -68,79 +89,8 @@ export const articleListView = (c:Context) =>{
                             </div>
                             <div class="box-content">
                                 <ul>
-                                    <li>
-                                        <div class="right">
-                                            <div class="title">
-                                                <a href="/article/detail/12">微动态容易出爆款的领域有四大类，分别是新闻，故事，家庭情感，鸡汤。这四大类中最受欢迎的是什么？是情感题材。</a>
-                                            </div>
-                                            <div class="sub-title">微动态容易出爆款的领域有四大类，分别是新闻，故事，家庭情感，鸡汤。这四大类中最受欢迎的是什么？是情</div>
-                                            <div class="time">2024-09-02</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="left">
-                                            <a href="">
-                                                <img alt="" class="img" src="https://pic.rmb.bdstatic.com/bjh/4ba6f0ef7da669647ea953fb50dde7b08384.png@c_1,w_1177,h_785,x_0,y_0"/>
-                                            </a>
-                                        </div>
-                                        <div class="right">
-                                            <div class="title">
-                                                <a href="#">微动态容易出爆款的领域有四大类，分别是新闻，故事，家庭情感，鸡汤。这四大类中最受欢迎的是什么？是情感题材。</a>
-                                            </div>
-                                            <div class="sub-title">微动态容易出爆款的领域有四大类，分别是新闻，故事，家庭情感，鸡汤。这四大类中最受欢迎的是什么？是情</div>
-                                            <div class="time">2024-09-02</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="left">
-                                            <img alt="" class="img" src="https://pic.rmb.bdstatic.com/bjh/4ba6f0ef7da669647ea953fb50dde7b08384.png@c_1,w_1177,h_785,x_0,y_0"/>
-                                        </div>
-                                        <div class="right">
-                                            <div class="title">
-                                                <a href="#">微动态容易出爆款的领域有四大类，分别是新闻，故事，家庭情感，鸡汤。这四大类中最受欢迎的是什么？是情感题材。</a>
-                                            </div>
-                                            <div class="sub-title"></div>
-                                            <div class="time">2024-09-02</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="right">
-                                            <div class="title">
-                                                <a href="#">微动态容易出爆款的领域有四大类，分别是新闻，故事，家庭情感，鸡汤。这四大类中最受欢迎的是什么？是情感题材。</a>
-                                            </div>
-                                            <div class="sub-title"></div>
-                                            <div class="time">2024-09-02</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="left">
-                                            <img alt="" class="img" src="https://pic.rmb.bdstatic.com/bjh/4ba6f0ef7da669647ea953fb50dde7b08384.png@c_1,w_1177,h_785,x_0,y_0"/>
-                                        </div>
-                                        <div class="right">
-                                            <div class="title">
-                                                <a href="#">微动态容易出爆款的领域有四大类，分别是新闻，故事，家庭情感，鸡汤。这四大类中最受欢迎的是什么？是情感题材。</a>
-                                            </div>
-                                            <div class="sub-title"></div>
-                                            <div class="time">2024-09-02</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="left">
-                                            <img alt="" class="img" src="https://pic.rmb.bdstatic.com/bjh/4ba6f0ef7da669647ea953fb50dde7b08384.png@c_1,w_1177,h_785,x_0,y_0"/>
-                                        </div>
-                                        <div class="right">
-                                            <div class="title">
-                                                <a href="#">微动态容易出爆款的领域有四大类，分别是新闻，故事，家庭情感，鸡汤。这四大类中最受欢迎的是什么？是情感题材。</a>
-                                            </div>
-                                            <div class="sub-title"></div>
-                                            <div class="time">2024-09-02</div>
-                                        </div>
-                                    </li>
+                                    ${raw(htmlItemList)}
                                 </ul>
-
-
-
-
                             </div>
                             <div class="box-footer">
 
