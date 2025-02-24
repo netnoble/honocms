@@ -31,13 +31,13 @@ export const indexView = (c:Context) =>
                 table.render({
                     elem: '#'+tableElem,
                     url: urlTableList, // 此处为静态模拟数据，实际使用时需换成真实接口
-                    page: false,
+                    page: true,
                     parseData: function(res){ // res 即为原始返回的数据
                         return {
                             "code": res.code===200 ? 0 : res.code, // 解析接口状态
                             "message": res.message || '', // 解析提示文本
-                            "count": res.total||0, // 解析数据长度
-                            "data": res.data||[] // 解析数据列表
+                            "count": res.data.count||0, // 解析数据长度
+                            "data": res.data.list||[] // 解析数据列表
                         };
                     },
                     defaultToolbar:[//右上角图标工具
