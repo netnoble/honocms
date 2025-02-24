@@ -7,6 +7,14 @@ import {adSchema} from "@/db/schema/adSchema";
 //列表
 export async function listItem(c:Context) {
     try {
+        // 从请求体中获取分页参数
+        // const body = await c.req.json(); // 解析 JSON 请求体
+        // const page = parseInt(body.page) || 1; // 默认第一页
+        // const pageSize = parseInt(body.pageSize) || 10; // 默认每页10条记录
+        //
+        // // 计算 offset
+        // const offset = (page - 1) * pageSize;
+
         const db = drizzle(c.env.DB); 
         const result = await db.select()
             .from(adSchema)
@@ -15,7 +23,10 @@ export async function listItem(c:Context) {
                     eq(adSchema.is_deleted, 1)
                 )
             )
-            .orderBy(desc(adSchema.id)).all();
+            .orderBy(desc(adSchema.id))
+            // .limit(pageSize)
+            // .offset(offset)
+            .all();
         return await sendSuccessResponse(result);
     } catch (error) {
         // 捕获任何查询执行期间发生的错误
