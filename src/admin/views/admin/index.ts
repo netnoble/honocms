@@ -36,8 +36,8 @@ export const indexView = (c:Context) =>
                         return {
                             "code": res.code===200 ? 0 : res.code, // 解析接口状态
                             "message": res.message || '', // 解析提示文本
-                            "count": res.total||0, // 解析数据长度
-                            "data": res.data||[] // 解析数据列表
+                            "count": res.data.count||0, // 解析数据长度
+                            "data": res.data.list||[] // 解析数据列表
                         };
                     },
                     defaultToolbar:[//右上角图标工具

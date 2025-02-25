@@ -1,12 +1,17 @@
 // src/admin/api_logic/articleApiLogic.ts
-import {and, desc, eq, sql} from 'drizzle-orm';
+import {and, desc, eq, sql,count} from 'drizzle-orm';
 import { drizzle } from 'drizzle-orm/d1';
 import {sendErrorResponse, sendSuccessResponse} from "@/utils/responseUtil";
 import {Context} from "hono";
 import {articleSchema} from "@/db/schema/articleSchema";
+import {adminSchema} from "@/db/schema/adminSchema";
 //列表
 export async function listItem(c:Context) {
     try {
+        // 获取查询参数并转换为数字
+        const page = parseInt(c.req.query('page') ?? '1', 10); // 默认第一页
+        const pageSize = parseInt(c.req.query('limit') ?? '10', 10); // 默认每页10条记录
+        const offset = (page - 1) * pageSize;
         const db = drizzle(c.env.DB); 
         const result = await db.select()
             .from(articleSchema)
@@ -15,8 +20,26 @@ export async function listItem(c:Context) {
                     eq(articleSchema.is_deleted, 1)
                 )
             )
-            .orderBy(desc(articleSchema.id)).all();
-        return await sendSuccessResponse(result);
+            .limit(pageSize)
+            .offset(offset)
+            .orderBy(desc(articleSchema.id))
+            .all();
+        // 查询总条数
+        const totalCountResult = await db
+            .select({ count: count() })
+            .from(articleSchema)
+            .where(
+                and(
+                    eq(articleSchema.is_deleted, 1)
+                )
+            )
+            .all();
+
+        const totalCount = totalCountResult[0].count;
+        return await sendSuccessResponse({
+            count:totalCount,
+            list:result
+        });
     } catch (error) {
         // 捕获任何查询执行期间发生的错误
         console.error('Error executing query:', error);
